@@ -14,14 +14,18 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Main class of this app.
+ */
 public class Main {
     public static void main(String[] args) {
 
-        // Load config and data files
+        // Load config form file
         Config config = new Config();
         config.loadConfigFromFile();
         config.showConfig();
 
+        // Load data form file
         AllWordsContainer allWordsContainer = new AllWordsContainer();
         allWordsContainer.loadFile();
 

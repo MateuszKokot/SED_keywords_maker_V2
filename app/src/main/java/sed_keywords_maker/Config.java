@@ -10,6 +10,9 @@ import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+/**
+ * This class is tool for load and save config from file.
+ */
 public class Config {
     private  String host;
     private  String port;
@@ -58,6 +61,9 @@ public class Config {
         }
     }
 
+    /**
+     * This method print in console config variables loaded from file
+     */
     public void showConfig(){
         System.out.println("[ Config ]");
         System.out.println(">Host: " + getHost());
@@ -67,54 +73,46 @@ public class Config {
         System.out.println(">Password: " + getPassword());
     }
 
+    /**
+     * Getters and Setters
+     * @return Fields of this class
+     */
     public String getHost() {
         return host;
     }
-
     private void setHost(String host) {
         this.host = host;
     }
-
     public String getPort() {
         return port;
     }
-
     private void setPort(String port) {
         this.port = port;
     }
-
     public String getDatabase() {
         return database;
     }
-
     private void setDatabase(String database) {
         this.database = database;
     }
-
     public String getUserName() {
         return userName;
     }
-
     private void setUserName(String userName) {
         this.userName = userName;
     }
-
     public String getPassword() {
         return password;
     }
-
     private void setPassword(String password) {
         this.password = password;
     }
-
     public boolean isConfigLoaded() {
         return configLoaded;
     }
-
     private void setConfigLoaded(boolean configLoaded) {
         this.configLoaded = configLoaded;
     }
-
     public String getTableName() {
         return tableName;
     }
